@@ -23,10 +23,10 @@ email: your-email@example.com
 description: >- 
   A blog about robotics, artificial intelligence, and technology.
   Sharing insights and experiences in the world of automation and AI.
-baseurl: "/RoboTalk" # the subpath of your site, e.g. /blog
+baseurl: "/RoboTalkBlog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: your_twitter_handle
-github_username:  your_github_username
+github_username:  abigaillhiggins
 
 # Build settings
 theme: minima
