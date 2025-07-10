@@ -1,0 +1,68 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <h2 class="footer-heading">{{ site.title | escape }}</h2>
+      <div class="footer-description">
+        {{ site.description | escape }}
+      </div>
+      <div class="footer-social">
+        {%- if site.github_username -%}
+        <a href="https://github.com/{{ site.github_username }}">
+          GitHub
+        </a>
+        {%- endif -%}
+        {%- if site.twitter_username -%}
+        <a href="https://twitter.com/{{ site.twitter_username }}">
+          Twitter
+        </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid #e8e8e8;
+    padding: 30px 0;
+    background-color: #f8f8f8;
+  }
+
+  .footer-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-description {
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 15px;
+  }
+
+  .footer-social a {
+    color: #424242;
+    text-decoration: none;
+  }
+
+  .footer-social a:hover {
+    color: #2a7ae2;
+  }
+
+  @media screen and (max-width: 600px) {
+    .site-footer {
+      padding: 20px 0;
+    }
+
+    .footer-content {
+      text-align: center;
+    }
+
+    .footer-social {
+      justify-content: center;
+    }
+  }
+</style> 
