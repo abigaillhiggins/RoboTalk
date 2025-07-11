@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to RoboTalk: Exploring the Future of Technology"
-date: 2024-03-20 12:00:00 +0000
+date: 2024-07-11 12:00:00 +0000
 categories: [Technology, AI]
 tags: [welcome, robotics, artificial-intelligence]
 author: Abi 
