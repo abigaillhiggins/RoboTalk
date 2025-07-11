@@ -1,10 +1,12 @@
 ---
 layout: article
 title: "Forget Super-intelligent AI - The Future is Agentic"
-date: 2024-03-28
+author: Abi 
+date: 2024-07-11
 categories: [AI, Technology]
 tags: [artificial intelligence, agentic ai, future tech]
 description: "Beyond AGI hype, discover how agentic AI applications are reshaping the future of work and technology in 2025."
+
 ---
 
 "AGI" — artificial general intelligence — is one of tech's most seductive buzzwords. In investor decks and glossy headlines, it's painted as a coming superintelligence that can do everything a human can, only better. But behind the hype, AGI is a loose and often ill-defined industry term. It acts more like a narrative magnet than a clear technical goal: it attracts attention, funding, and existential speculation.
