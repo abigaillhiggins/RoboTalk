@@ -1,25 +1,66 @@
 ---
+layout: default
+title: Page Not Found
 permalink: /404.html
-layout: page
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div class="error-container">
+    <h1 class="error-title">404</h1>
+    <div class="error-message">
+        <p>The page you're looking for seems to have been lost in cyberspace.</p>
+        <a href="{{ '/' | relative_url }}" class="btn">Return Home</a>
+    </div>
 </div>
+
+<style>
+.error-container {
+    text-align: center;
+    padding: 4rem 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.error-title {
+    font-size: 8rem;
+    margin: 0;
+    background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 255, 157, 0.5);
+    animation: glitch 1s infinite;
+}
+
+.error-message {
+    margin-top: 2rem;
+}
+
+.error-message p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0 0 20px rgba(0, 255, 157, 0.5);
+    }
+    25% {
+        text-shadow: -2px 0 var(--primary-color), 2px 0 var(--accent-color);
+    }
+    50% {
+        text-shadow: 2px 0 var(--primary-color), -2px 0 var(--accent-color);
+    }
+    75% {
+        text-shadow: -2px 0 var(--accent-color), 2px 0 var(--primary-color);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 255, 157, 0.5);
+    }
+}
+
+@media (max-width: 768px) {
+    .error-title {
+        font-size: 4rem;
+    }
+}
+</style>

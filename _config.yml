@@ -18,20 +18,68 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: RoboTalk Blog
-email: your-email@example.com
-description: >- 
-  A blog about robotics, artificial intelligence, and technology.
-  Sharing insights and experiences in the world of automation and AI.
-baseurl: "/RoboTalkBlog" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: your_twitter_handle
-github_username:  abigaillhiggins
+title: RoboTalk
+email: abigailnhiggins@gmail.com
+author: Abigail Higgins
+description: >-
+  Exploring the intersection of robotics, AI, and the future of technology. 
+  Join me on a journey through cutting-edge innovations and technological breakthroughs.
+baseurl: ""
+url: ""
+github_username: abigaillhiggins
+
+# Theme settings
+theme_settings:
+  # Colors
+  primary_color: "#00ff9d"    # Neon green
+  accent_color: "#ff00ff"     # Neon pink
+  background_color: "#0a0a0a" # Near black
+  text_color: "#ffffff"       # White
+  
+  # Fonts
+  heading_font: "'Orbitron', sans-serif"
+  body_font: "'Exo 2', sans-serif"
 
 # Build settings
-theme: minima
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  articles:
+    output: true
+    permalink: /articles/:title/
+  posts:
+    output: true
+    permalink: /posts/:title/
+
+# Plugins
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "article"
+      comments: true
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
 
 # Exclude from processing
 exclude:
@@ -46,4 +94,3 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - venv/
-  - README.md

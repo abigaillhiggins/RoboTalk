@@ -1,0 +1,185 @@
+---
+layout: default
+title: Articles
+permalink: /articles/
+---
+
+<div class="articles-container">
+    <header class="articles-header">
+        <h1 class="page-title neon-text">In-Depth Articles</h1>
+        <p class="page-subtitle">Comprehensive explorations of robotics and AI</p>
+    </header>
+
+    <div class="articles-grid">
+        {% for article in site.articles %}
+        <article class="article-card">
+            <div class="article-content">
+                <header class="article-header">
+                    <h2 class="article-title">
+                        <a href="{{ article.url | relative_url }}" class="neon-link">{{ article.title }}</a>
+                    </h2>
+                    <div class="article-meta">
+                        <span class="article-author">{{ article.author }}</span>
+                        <span class="article-date">{{ article.date | date: "%B %-d, %Y" }}</span>
+                    </div>
+                </header>
+
+                <div class="article-excerpt">
+                    {{ article.excerpt }}
+                </div>
+
+                <footer class="article-footer">
+                    <div class="article-categories">
+                        {% for category in article.categories %}
+                        <span class="category-tag">{{ category }}</span>
+                        {% endfor %}
+                    </div>
+                    <a href="{{ article.url | relative_url }}" class="read-more-link">Read Full Article →</a>
+                </footer>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+.articles-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.articles-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.article-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 157, 0.1);
+    border-color: var(--primary-color);
+}
+
+.article-header {
+    margin-bottom: 1.5rem;
+}
+
+.article-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.article-title a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.article-title a:hover {
+    color: var(--primary-color);
+}
+
+.article-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.article-author {
+    color: var(--accent-color);
+}
+
+.article-excerpt {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.article-categories {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.category-tag {
+    background: rgba(255, 0, 255, 0.1);
+    color: var(--accent-color);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.category-tag:hover {
+    background: rgba(255, 0, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.read-more-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.read-more-link:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .articles-container {
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .article-title {
+        font-size: 1.5rem;
+    }
+
+    .article-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}
+</style> 

@@ -1,0 +1,221 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<div class="blog-container">
+    <header class="blog-header">
+        <h1 class="blog-title">Tech Updates</h1>
+        <p class="blog-subtitle">Quick insights from the world of robotics and AI</p>
+    </header>
+
+    <div class="tweet-feed">
+        {% for post in site.posts %}
+        <article class="tweet-card">
+            <div class="tweet-header">
+                <div class="tweet-author">
+                    <div class="author-avatar">
+                        {{ post.author | slice: 0 | upcase }}
+                    </div>
+                    <div class="author-info">
+                        <span class="author-name">{{ post.author }}</span>
+                        <span class="tweet-date">{{ post.date | date: "%b %-d" }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tweet-content">
+                <h2 class="tweet-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h2>
+                <p class="tweet-text">{{ post.content | strip_html | truncatewords: 50 }}</p>
+            </div>
+
+            <div class="tweet-categories">
+                {% for category in post.categories %}
+                <span class="category-tag">#{{ category }}</span>
+                {% endfor %}
+            </div>
+
+            <div class="tweet-actions">
+                <a href="{{ post.url | relative_url }}" class="tweet-action">
+                    <span class="action-icon">💬</span>
+                    Discuss
+                </a>
+                <a href="{{ post.url | relative_url }}" class="tweet-action">
+                    <span class="action-icon">🔄</span>
+                    Share
+                </a>
+                <a href="{{ post.url | relative_url }}" class="tweet-action">
+                    <span class="action-icon">⭐</span>
+                    Save
+                </a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blog-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+}
+
+.tweet-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tweet-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.tweet-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 255, 157, 0.1);
+    border-color: var(--primary-color);
+}
+
+.tweet-header {
+    margin-bottom: 1rem;
+}
+
+.tweet-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    color: var(--background-color);
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.tweet-date {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.tweet-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.tweet-title a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.tweet-title a:hover {
+    color: var(--primary-color);
+}
+
+.tweet-text {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.tweet-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-tag {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.category-tag:hover {
+    color: var(--primary-color);
+}
+
+.tweet-actions {
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tweet-action {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.tweet-action:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.action-icon {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 1rem;
+    }
+
+    .blog-title {
+        font-size: 2rem;
+    }
+
+    .tweet-actions {
+        gap: 1rem;
+    }
+}
+</style> 

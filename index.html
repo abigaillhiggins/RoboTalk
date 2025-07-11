@@ -1,0 +1,235 @@
+---
+layout: default
+---
+
+<div class="hero-section">
+    <h1 class="hero-title"><span class="neon-text">{{ site.title }}</span></h1>
+    <p class="hero-subtitle">Exploring the Future of Robotics and AI</p>
+    <div class="hero-buttons">
+        <a href="{{ '/blog' | relative_url }}" class="btn">Read Blog</a>
+        <a href="{{ '/articles' | relative_url }}" class="btn btn-outline">View Articles</a>
+    </div>
+</div>
+
+<section class="model-showcase">
+    <div class="model-container">
+        <div class="sketchfab-embed-wrapper">
+            <iframe 
+                title="Pepper Robot" 
+                frameborder="0" 
+                allowfullscreen 
+                mozallowfullscreen="true" 
+                webkitallowfullscreen="true" 
+                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                xr-spatial-tracking 
+                execution-while-out-of-viewport 
+                execution-while-not-rendered 
+                web-share 
+                src="https://sketchfab.com/models/4acb2c951d9c4d20b758e8d08e479c04/embed">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<section class="featured-posts">
+    <h2 class="section-title">Latest Posts</h2>
+    <div class="post-grid">
+        {% for post in site.posts limit:6 %}
+        <article class="post-card">
+            <header class="post-card-header">
+                <h3 class="post-card-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h3>
+                <div class="post-card-meta">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | date: "%B %-d, %Y" }}
+                    </time>
+                </div>
+            </header>
+            <div class="post-card-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 30 }}
+            </div>
+            <footer class="post-card-footer">
+                {% if post.categories.size > 0 %}
+                <div class="post-card-categories">
+                    {% for category in post.categories limit:2 %}
+                    <span class="category-tag">{{ category }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <a href="{{ post.url | relative_url }}" class="read-more">Read More &rarr;</a>
+            </footer>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<style>
+.hero-section {
+    text-align: center;
+    padding: 3rem 0;  /* Reduced from 6rem to 3rem */
+    margin-bottom: 3rem; /* Reduced from 4rem to 3rem */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(0, 255, 157, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(255, 0, 255, 0.1) 0%, transparent 50%);
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 3rem;  /* Reduced from 4rem to 3rem */
+    margin-bottom: 1rem;  /* Reduced from 1.5rem to 1rem */
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1rem;  /* Reduced from 1.2rem to 1rem */
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 500px;  /* Reduced from 600px to 500px */
+    margin: 0 auto 1.5rem;  /* Reduced from 2rem to 1.5rem */
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-outline:hover {
+    background: var(--accent-color);
+    color: var(--background-color);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.post-card-header {
+    margin-bottom: 1rem;
+}
+
+.post-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-card-title a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-card-title a:hover {
+    color: var(--primary-color);
+}
+
+.post-card-meta {
+    font-family: var(--heading-font);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.post-card-excerpt {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.post-card-footer {
+    margin-top: auto;
+}
+
+.post-card-categories {
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.model-showcase {
+    margin: 4rem auto;
+    padding: 0 1rem;
+    max-width: 600px; /* Changed from 1200px to 600px */
+}
+
+.model-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    background: rgba(0, 255, 157, 0.05);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.1);
+}
+
+.sketchfab-embed-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sketchfab-embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+</style> 
