@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
     
     {% seo %}
     {% feed_meta %}
@@ -24,14 +24,14 @@
         <header class="site-header">
             <div class="container">
                 <nav class="main-nav">
-                    <a href="{{ '/' | relative_url }}" class="site-logo">
+                    <a href="{{ site.baseurl }}/" class="site-logo">
                         <span class="neon-text">{{ site.title }}</span>
                     </a>
                     <div class="nav-links">
-                        <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
-                        <a href="{{ '/blog' | relative_url }}" class="nav-link">Blog</a>
-                        <a href="{{ '/articles' | relative_url }}" class="nav-link">Articles</a>
-                        <a href="{{ '/contact' | relative_url }}" class="nav-link">Contact</a>
+                        <a href="{{ site.baseurl }}/" class="nav-link">Home</a>
+                        <a href="{{ site.baseurl }}/blog" class="nav-link">Blog</a>
+                        <a href="{{ site.baseurl }}/articles" class="nav-link">Articles</a>
+                        <a href="{{ site.baseurl }}/contact" class="nav-link">Contact</a>
                     </div>
                 </nav>
             </div>

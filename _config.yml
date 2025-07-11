@@ -24,8 +24,8 @@ author: Abigail Higgins
 description: >-
   Exploring the intersection of robotics, AI, and the future of technology. 
   Join me on a journey through cutting-edge innovations and technological breakthroughs.
-baseurl: ""
-url: ""
+baseurl: "/RoboTalkBlog"
+url: "https://abigaillhiggins.github.io"
 github_username: abigaillhiggins
 
 # Theme settings
