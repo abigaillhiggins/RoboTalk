@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Forget Super-intelligent AI - The Future is Agentic"
-author: Abi 
+author: Abigail Higgins 
 date: 2024-07-11
 categories: [AI, Technology]
 tags: [artificial intelligence, agentic ai, future tech]
