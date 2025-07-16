@@ -113,6 +113,49 @@ layout: default
     padding-left: 1.5rem;
 }
 
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 8px 25px rgba(0, 255, 157, 0.1);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    transition: all 0.3s ease;
+}
+
+.article-content img:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 255, 157, 0.2);
+}
+
+.article-content figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.article-content figure img {
+    margin: 0;
+}
+
+.article-content figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.article-content blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 255, 157, 0.05);
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+}
+
 .article-footer {
     margin-top: 4rem;
     padding-top: 2rem;
