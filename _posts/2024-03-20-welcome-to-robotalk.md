@@ -1,24 +1,38 @@
 ---
 layout: post
-title: "Welcome to RoboTalk: Exploring the Future of Technology"
+title: "Welcome to RoboTalk: Following Pepper's AI Journey"
 date: 2024-07-11 12:00:00 +0000
-categories: [Technology, AI]
-tags: [welcome, robotics, artificial-intelligence]
+categories: [Technology, AI, Pepper]
+tags: [welcome, robotics, artificial-intelligence, pepper-robot]
 author: Abi 
 ---
 
-Welcome to RoboTalk, a space where we explore the fascinating intersection of robotics, artificial intelligence, and the future of technology. In this inaugural post, let's dive into what you can expect from this blog and why these topics matter more than ever.
+Welcome to RoboTalk, your front-row seat to the live development of **Pepper the robot's AI capabilities**. This blog will chronicle the fascinating journey of how Pepper evolves from a basic humanoid robot into an increasingly intelligent and autonomous AI companion.
 
-## The Dawn of a New Era
+## Meet Pepper
 
-We're living in an unprecedented time where the lines between science fiction and reality are increasingly blurred. Robots are no longer confined to factory floors, and AI is not just a concept in movies. They're integral parts of our daily lives, shaping how we work, live, and interact.
+Pepper is our humanoid robot companion who's embarking on an incredible AI development journey. Through this blog, you'll witness firsthand how Pepper's artificial intelligence grows, learns, and adapts - from basic interactions to complex autonomous behaviors.
 
+## What to Expect
 
-## Our Mission
+In the coming weeks and months, we'll document:
 
-In the coming weeks and months, we'll explore cutting-edge developments in robotics and AI, featuring:
+- **AI Capability Milestones**: Watch as Pepper learns new skills and behaviors
+- **Technical Deep Dives**: Behind-the-scenes look at the AI algorithms powering Pepper
+- **Real-time Updates**: Live demonstrations and progress reports
+- **Challenges & Breakthroughs**: The ups and downs of AI development
 
-- Interviews with industry experts
-- Ethical considerations and discussions
-- Latest news in cutting edge robotics acessible for everyone!
+## Latest Articles
+
+We're also excited to announce the release of our first in-depth articles exploring the broader world of robotics and AI:
+
+- **[Forget Super-intelligent AI - The Future is Agentic](/articles/agentic-ai-future.html)** - Discover how agentic AI applications are reshaping the future of work and technology
+- **[Multi-Modal AI: Beyond Text and Images](/articles/multi-modal.html)** - Exploring how AI systems process multiple types of data simultaneously
+- **[Robotic Sports: The Future of Competition](/articles/robo-sport.html)** - How robots are revolutionizing sports and physical competition
+
+## Join the Journey
+
+This isn't just a blog - it's a living document of AI evolution. Follow along as we push the boundaries of what's possible with humanoid robotics and artificial intelligence. Pepper's story is just beginning, and you're here for every breakthrough.
+
+Stay tuned for regular updates, live demonstrations, and the incredible journey ahead!
 
