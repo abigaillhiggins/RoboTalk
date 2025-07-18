@@ -11,6 +11,32 @@ layout: default
     </div>
 </div>
 
+<section class="vision-section">
+    <div class="vision-content">
+        <h2 class="vision-title">Vision</h2>
+        <p class="vision-text">
+            RoboTalk bridges the gap between cutting-edge AI research and everyday understanding. We believe that the future of technology should be accessible to everyone, not just experts. Through clear, engaging content and real-world examples, we're demystifying the complex world of artificial intelligence and robotics.
+        </p>
+        <p class="vision-text">
+            Our mission is to make AI and robotics concepts approachable, relatable, and exciting. Whether you're a tech enthusiast, a curious learner, or someone who wants to understand how these technologies will shape our future, RoboTalk is your gateway to the world of intelligent machines.
+        </p>
+        <div class="vision-features">
+            <div class="vision-feature">
+                <h3>In-Depth Articles</h3>
+                <p>Comprehensive explorations of AI and robotics topics</p>
+            </div>
+            <div class="vision-feature">
+                <h3>Live Development</h3>
+                <p>Real-time updates on AI technology in action</p>
+            </div>
+            <div class="vision-feature">
+                <h3>Accessible Science</h3>
+                <p>Complex concepts explained in simple terms</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="model-showcase">
     <div class="model-container">
         <div class="sketchfab-embed-wrapper">
@@ -115,6 +141,69 @@ layout: default
     background: var(--accent-color);
     color: var(--background-color);
     box-shadow: 0 0 20px var(--accent-color);
+}
+
+.vision-section {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(0, 255, 157, 0.1);
+    border-bottom: 1px solid rgba(0, 255, 157, 0.1);
+}
+
+.vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.vision-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.vision-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.vision-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.vision-feature {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.vision-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 157, 0.1);
+    border-color: var(--primary-color);
+}
+
+.vision-feature h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-family: var(--heading-font);
+}
+
+.vision-feature p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
 }
 
 .section-title {
