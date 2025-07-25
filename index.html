@@ -6,10 +6,35 @@ layout: default
     <h1 class="hero-title"><span class="neon-text">{{ site.title }}</span></h1>
     <p class="hero-subtitle">Exploring the Future of Robotics and AI</p>
     <div class="hero-buttons">
-        <a href="{{ '/blog' | relative_url }}" class="btn">Read Blog</a>
+        <a href="{{ '/blog' | relative_url }}" class="btn">Pepper Updates</a>
         <a href="{{ '/articles' | relative_url }}" class="btn btn-outline">View Articles</a>
     </div>
 </div>
+
+<section class="model-showcase">
+    <div class="model-flex">
+        <div class="model-container">
+            <div class="sketchfab-embed-wrapper">
+                <iframe 
+                    title="Pepper Robot" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    mozallowfullscreen="true" 
+                    webkitallowfullscreen="true" 
+                    allow="autoplay; fullscreen; xr-spatial-tracking" 
+                    xr-spatial-tracking 
+                    execution-while-out-of-viewport 
+                    execution-while-not-rendered 
+                    web-share 
+                    src="https://sketchfab.com/models/4acb2c951d9c4d20b758e8d08e479c04/embed">
+                </iframe>
+            </div>
+        </div>
+        <div class="model-description">
+            <p>See live updates of Pepper the Robot's capabilities development</p>
+        </div>
+    </div>
+</section>
 
 <section class="vision-section">
     <div class="vision-content">
@@ -33,26 +58,6 @@ layout: default
                 <h3>Accessible Science</h3>
                 <p>Complex concepts explained in simple terms</p>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="model-showcase">
-    <div class="model-container">
-        <div class="sketchfab-embed-wrapper">
-            <iframe 
-                title="Pepper Robot" 
-                frameborder="0" 
-                allowfullscreen 
-                mozallowfullscreen="true" 
-                webkitallowfullscreen="true" 
-                allow="autoplay; fullscreen; xr-spatial-tracking" 
-                xr-spatial-tracking 
-                execution-while-out-of-viewport 
-                execution-while-not-rendered 
-                web-share 
-                src="https://sketchfab.com/models/4acb2c951d9c4d20b758e8d08e479c04/embed">
-            </iframe>
         </div>
     </div>
 </section>
@@ -305,6 +310,45 @@ layout: default
     width: 100%;
     height: 100%;
     border-radius: 12px;
+}
+
+.model-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.model-container {
+    flex: 1 1 400px;
+    min-width: 300px;
+}
+.model-description {
+    flex: 0 1 400px;
+    min-width: 200px;
+    max-width: 500px;
+    background: rgba(0,255,157,0.07);
+    border: 1px solid rgba(0,255,157,0.2);
+    border-radius: 12px;
+    padding: 0.75rem 2.5rem;
+    color: var(--primary-color);
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,255,157,0.08);
+    margin: 0 auto;
+}
+@media (max-width: 900px) {
+    .model-flex {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .model-description {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 0.75rem 1rem;
+    }
 }
 
 @media (max-width: 768px) {
