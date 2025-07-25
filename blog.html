@@ -37,21 +37,6 @@ permalink: /blog/
                 <span class="category-tag">#{{ category }}</span>
                 {% endfor %}
             </div>
-
-            <div class="tweet-actions">
-                <a href="{{ post.url | relative_url }}" class="tweet-action">
-                    <span class="action-icon">💬</span>
-                    Discuss
-                </a>
-                <a href="{{ post.url | relative_url }}" class="tweet-action">
-                    <span class="action-icon">🔄</span>
-                    Share
-                </a>
-                <a href="{{ post.url | relative_url }}" class="tweet-action">
-                    <span class="action-icon">⭐</span>
-                    Save
-                </a>
-            </div>
         </article>
         {% endfor %}
     </div>

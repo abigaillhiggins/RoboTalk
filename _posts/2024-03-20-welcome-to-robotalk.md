@@ -7,6 +7,22 @@ tags: [welcome, robotics, artificial-intelligence, pepper-robot]
 author: Abi 
 ---
 
+<section class="model-showcase">
+  <div class="model-flex">
+    <div class="model-container">
+      <div class="sketchfab-embed-wrapper">
+        <iframe title="Robot Pepper" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8a31853948d848828584f2a28b5c21f3/embed"></iframe>
+        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+          <a href="https://sketchfab.com/3d-models/robot-pepper-8a31853948d848828584f2a28b5c21f3?utm_medium=embed&utm_campaign=share-popup&utm_content=8a31853948d848828584f2a28b5c21f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Robot Pepper </a> by <a href="https://sketchfab.com/khetaggoldenboy?utm_medium=embed&utm_campaign=share-popup&utm_content=8a31853948d848828584f2a28b5c21f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> khetaggoldenboy </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8a31853948d848828584f2a28b5c21f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+        </p>
+      </div>
+    </div>
+    <div class="model-description">
+      <p>See live updates of Pepper the Robot's capabilities development</p>
+    </div>
+  </div>
+</section>
+
 Welcome to RoboTalk, your front-row seat to the live development of **Pepper the robot's AI capabilities**. This blog will chronicle the fascinating journey of how Pepper evolves from a basic humanoid robot into an increasingly intelligent and autonomous AI companion.
 
 ## Meet Pepper

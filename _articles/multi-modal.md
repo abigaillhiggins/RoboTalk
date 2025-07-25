@@ -10,6 +10,11 @@ description: "With the fusion of large language models and robotics, humanoid ro
 
 Last month, Figure AI released footage that stunned the internet: a humanoid robot recognized a fruit on a table, picked it up, and responded naturally to spoken instructions — all in one fluid interaction. This wasn’t just motion planning or simple programming. This was **multimodal AI** — the ability to combine vision, language, and motor control into a unified intelligence.
 
+
+<img src="{{ site.baseurl }}/assets/images/articles/stock_image2.png" alt="Stock image illustrating accessible coding" style="width:40%; display:block; margin: 0 auto;" />
+
+
+
 > “We’re watching robots learn to think with their eyes and speak with their hands,” said Brett Adcock, founder of Figure AI. “That’s the power of combining robotics with foundation models.” [1]
 
 From Tesla’s Optimus Gen 2 to Unitree’s shockingly low-cost G1 robot, it’s clear we’ve entered a new era: **robots that reason like chatbots and move like humans**.
