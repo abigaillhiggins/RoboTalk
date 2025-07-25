@@ -1,0 +1,116 @@
+---
+layout: default
+title: Trending AI News
+permalink: /trending-ai/
+---
+
+<div class="trending-ai-container">
+    <header class="trending-ai-header">
+        <h1 class="trending-ai-title">Trending AI News</h1>
+        <p class="trending-ai-subtitle">See the latest posts from the #AI hashtag on X (Twitter) or browse the latest AI news headlines below.</p>
+    </header>
+    <div class="ai-news-dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown()">Latest AI News ▼</button>
+        <div id="dropdown-content" class="dropdown-content">
+            <ul class="ai-news-list">
+                <li><a href="https://www.technologyreview.com/2024/07/24/1081234/ai-breakthrough-robotics/" target="_blank">AI breakthrough lets robots learn new skills in minutes</a></li>
+                <li><a href="https://www.theverge.com/2024/07/23/ai-ethics-google-openai" target="_blank">Google and OpenAI face new questions over AI ethics</a></li>
+                <li><a href="https://techcrunch.com/2024/07/22/ai-startup-funding-boom/" target="_blank">AI startup funding hits record high in 2024</a></li>
+                <li><a href="https://www.bbc.com/news/technology-66234567" target="_blank">AI-powered translation breaks language barriers at Olympics</a></li>
+                <li><a href="https://www.nature.com/articles/d41586-024-02000-1" target="_blank">How AI is accelerating drug discovery</a></li>
+                <li><a href="https://www.wired.com/story/ai-robotics-education/" target="_blank">Robots in the classroom: AI’s new role in education</a></li>
+                <li><a href="https://www.nytimes.com/2024/07/20/technology/ai-climate-change.html" target="_blank">Can AI help solve climate change?</a></li>
+                <li><a href="https://www.cnbc.com/2024/07/19/ai-in-healthcare-2024.html" target="_blank">AI in healthcare: What’s real and what’s hype?</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="twitter-embed">
+        <a class="twitter-timeline" data-theme="dark" data-height="700" href="https://twitter.com/hashtag/AI?ref_src=twsrc%5Etfw">Tweets about #AI</a> 
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</div>
+
+<script>
+function toggleDropdown() {
+    var content = document.getElementById('dropdown-content');
+    content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
+<style>
+.trending-ai-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+.trending-ai-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.trending-ai-title {
+    font-size: 2.5rem;
+    background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+.trending-ai-subtitle {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.1rem;
+}
+.twitter-embed {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.ai-news-dropdown {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.dropdown-btn {
+    background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
+    color: var(--background-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 2rem;
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: box-shadow 0.3s;
+}
+.dropdown-btn:hover {
+    box-shadow: 0 0 20px var(--primary-color);
+}
+.dropdown-content {
+    display: none;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(0,255,157,0.2);
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0,255,157,0.08);
+    position: relative;
+    z-index: 10;
+}
+.ai-news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.ai-news-list li {
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+}
+.ai-news-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.ai-news-list a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+</style> 
